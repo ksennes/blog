@@ -13,8 +13,6 @@ export const Header = () => {
 
   const location = useLocation();
 
-  console.log(location, post);
-
   useEffect(() => {
     if(location.pathname !== '/' && post) {
       setTitle(post.title);

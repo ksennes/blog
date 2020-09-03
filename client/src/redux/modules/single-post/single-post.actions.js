@@ -9,7 +9,6 @@ export const getPostByIdAction = (_id) => (dispatch) => {
 
   getPostById(_id)
     .then((res) => {
-        console.log(res.data);
       dispatch(getPostByIdSuccessAction(res.data));
     })
     .catch((err) => {

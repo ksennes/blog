@@ -31,9 +31,7 @@ class PostService {
   }
 
   async delete(id) {
-    console.log('lox');
     const deletedPost = await PostModel.deleteOne({ _id: id });
-    console.log(deletedPost);
     if (deletedPost.deletedCount) return { success: true };
     return { success: false };
   }

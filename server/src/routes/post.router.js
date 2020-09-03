@@ -64,8 +64,6 @@ router.put("/update/:id", async (req, res) => {
 router.delete("/delete/:id", async (req, res) => {
   const {id} = req.params;
 
-  console.log(id);
-
   const result = await postService.delete(id);
   if ("success" in result && result.success) {
     res.status(200);

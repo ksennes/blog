@@ -24,7 +24,6 @@ export const FullPostLayout = () => {
   let history = useHistory();
 
   useEffect(() => {
-    console.log(id);
     const getPost = (postId) => dispatch(getPostByIdAction(postId));
     getPost(id);
   }, [id, dispatch]);
